@@ -1,0 +1,90 @@
+﻿@import "../../_mixins";
+
+.navbar {
+  @include d-flex(row, space-between, center);
+  background-color: rgb(52, 51, 51);
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  padding: 0 2rem;
+  
+  .brand {
+    flex: 1;
+  }
+  .menu {
+    ul {
+      @include d-flex(row, flex-start, center);
+      gap: 1rem;
+      li {
+          a {
+              color: #fff;
+              cursor: pointer;
+              text-decoration: none;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                  color:  var(--blue);
+              }
+          }
+      }
+    }
+  }
+  .hamburger {
+      display: none;
+      cursor: pointer;
+  }
+  .toggle {
+      cursor: pointer;
+      margin-left: 1rem;
+    svg {
+        color: var(--blue);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 1rem;
+
+    .menu {
+      @include d-flex(column, flex-start, center);
+      gap: 1rem;
+      color: #fff;
+      background-color: rgb(52, 51, 51);
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -240px;
+      z-index: 100;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &.open {
+        left: 0;
+      }
+      ul {
+        @include d-flex(column, center, center);
+        height: 100%;
+        gap: 2rem;
+        li {
+          a {
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              color:  var(--blue);
+            }
+          }
+        }
+      }
+    }
+    .hamburger {
+      display: block;
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+}
