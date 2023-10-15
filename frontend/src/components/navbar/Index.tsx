@@ -1,5 +1,5 @@
-﻿import React, { useContext, useState } from "react";
-import "./navbar.scss";
+﻿import { useContext, useState } from "react";
+import "../../styles/navbar.scss";
 import { Link } from "react-router-dom";
 import { ToggleButton } from "@mui/material";
 import { Menu, LightMode, DarkMode } from "@mui/icons-material";
@@ -7,8 +7,8 @@ import { ThemeContext } from "../../context/theme.context";
 
 const links = [
     { label: "Home", href: "/" },
-    { label: "Jobs", href: "/jobs" },
     { label: "Companies", href: "/companies" },
+    { label: "Jobs", href: "/jobs" },
     { label: "Candidates", href: "/candidates" },
 ];
 

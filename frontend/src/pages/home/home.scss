@@ -1,3 +1,37 @@
 .home {
-    
+    text-align: center;
+    padding-top: 100px;
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 5rem;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+
+        .link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                font-size: 36px;
+                color: #007BFF;
+                margin-right: 10px;
+            }
+
+            .description {
+                h2 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }

@@ -1,6 +1,6 @@
 import React, { useContext, lazy, Suspense} from "react";
 import { ThemeContext } from "./context/theme.context";
-import Navbar from "./components/navbar/navbar.component";
+import Navbar from "./components/navbar/Index";
 import {Routes, Route} from "react-router-dom"
 import CustomLinearProgress from "./custom-linear-progress/customlinearprogress.components";
 

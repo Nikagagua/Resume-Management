@@ -1,14 +1,37 @@
-﻿import './home.scss'
+﻿import './home.scss';
+import { FaBuilding, FaBriefcase, FaUser } from 'react-icons/fa'; // Import icons
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
-        <div className='content home'>
-            <h1>Welcome to website</h1>
-            <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at earum eos expedita id necessitatibus nostrum, obcaecati unde! Amet aperiam asperiores assumenda autem consectetur, consequuntur harum illo minus neque odit placeat quo recusandae, similique. Accusamus ad animi aspernatur autem beatae commodi cupiditate debitis dolores eaque earum eos facilis illum iste iusto magni minima molestias neque nesciunt odit perferendis quaerat quas, quibusdam quo ratione repellat reprehenderit rerum sapiente similique sit sunt suscipit temporibus totam ut. Asperiores blanditiis cumque ea eaque est facilis fuga fugiat fugit, laudantium minus modi natus necessitatibus nobis officia, quam, qui quibusdam repudiandae veniam voluptatibus voluptatum. Dignissimos, illo!
-            </span>
+        <div className='home'>
+            <h1>Welcome to Resume Management</h1>
+
+            <div className="button-container">
+                <Link to="/companies" className="link">
+                    <FaBuilding className="icon" />
+                    <div className="description">
+                        <h2>Companies</h2>
+                        <p>Manage your company profiles</p>
+                    </div>
+                </Link>
+                <Link to="/jobs" className="link">
+                    <FaBriefcase className="icon" />
+                    <div className="description">
+                        <h2>Jobs</h2>
+                        <p>Manage your job listings</p>
+                    </div>
+                </Link>
+                <Link to="/candidates" className="link">
+                    <FaUser className="icon" />
+                    <div className="description">
+                        <h2>Candidates</h2>
+                        <p>Manage candidate applications</p>
+                    </div>
+                </Link>
+            </div>
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;
