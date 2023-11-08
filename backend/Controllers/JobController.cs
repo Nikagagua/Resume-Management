@@ -11,14 +11,14 @@ namespace backend.Controllers;
 [Route("api/[controller]")]
 public class JobController : ControllerBase
 {
-    private ResumeManagementDbContext Context { get; }
-    private IMapper Mapper { get; }
-    
     public JobController(ResumeManagementDbContext context, IMapper mapper)
     {
         Context = context;
         Mapper = mapper;
     }
+
+    private ResumeManagementDbContext Context { get; }
+    private IMapper Mapper { get; }
 
     //Create
     [HttpPost]
@@ -31,7 +31,7 @@ public class JobController : ControllerBase
         return Ok($"Job {newJob.Title} created successfully");
     }
 
-    
+
     //Read
     [HttpGet]
     [Route("Get")]
@@ -39,12 +39,12 @@ public class JobController : ControllerBase
     {
         var jobs = await (Context.Jobs ?? throw new InvalidOperationException())
             .OrderByDescending(q => q.CreatedAt)
-            .Include(job => 
-            job.Company).ToListAsync();
+            .Include(job =>
+                job.Company).ToListAsync();
         var convertedJobs = Mapper.Map<IEnumerable<JobGetDto>>(jobs);
         return Ok(convertedJobs);
     }
-    
+
     //Get by ID
     [HttpGet("{id:long}")]
     public async Task<ActionResult<JobGetDto>> GetJob(long id)
@@ -54,50 +54,38 @@ public class JobController : ControllerBase
             .Include(job => job.Company)
             .FirstOrDefaultAsync(q => q.Id == id);
 
-        if (job == null)
-        {
-            return NotFound();
-        }
+        if (job == null) return NotFound();
 
         var convertedJob = Mapper.Map<JobGetDto>(job);
         return Ok(convertedJob);
     }
-    
+
     //Edit
     [HttpPut("Edit/{id:long}")]
     public async Task<IActionResult> EditJob(long id, [FromBody] JobCreateDto dto)
     {
         if (id <= 0) throw new ArgumentOutOfRangeException(nameof(id));
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
         Debug.Assert(Context.Jobs != null, "Context.Jobs != null");
         var existingJob = await Context.Jobs
             .FirstOrDefaultAsync(q => q.Id == id);
 
-        if (existingJob == null)
-        {
-            return NotFound();
-        }
+        if (existingJob == null) return NotFound();
 
         Mapper.Map(dto, existingJob);
         await Context.SaveChangesAsync();
-        
+
         return Ok($"Job {existingJob.Title} edited successfully");
     }
-    
+
     //Delete
     [HttpDelete]
     [Route("Delete")]
     public async Task<IActionResult> DeleteJob(long id)
     {
         var job = await Context.Jobs!.FirstOrDefaultAsync(q => q.Id == id);
-        if (job == null)
-        {
-            return NotFound();
-        }
+        if (job == null) return NotFound();
         Context.Jobs!.Remove(job);
         await Context.SaveChangesAsync();
         return Ok($"Job {job.Title} deleted successfully");

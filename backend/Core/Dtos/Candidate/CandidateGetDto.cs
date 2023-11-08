@@ -9,7 +9,9 @@ public class CandidateGetDto
     public string? Email { get; set; }
     public string? Phone { get; set; }
     public string? CoverLetter { get; set; }
+
     public string? ResumeUrl { get; set; }
+
     //Relations with Job
     public long JobId { get; set; }
     public string? JobTitle { get; set; }

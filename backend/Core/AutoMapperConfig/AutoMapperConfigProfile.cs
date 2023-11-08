@@ -13,12 +13,12 @@ public class AutoMapperConfigProfile : Profile
         //Company
         CreateMap<CompanyCreateDto, Company>();
         CreateMap<Company, CompanyGetDto>();
-        
+
         //Job
         CreateMap<JobCreateDto, Job>();
         CreateMap<Job, JobGetDto>()
             .ForMember(dest => dest.CompanyName,
-                opt => opt.MapFrom(src => 
+                opt => opt.MapFrom(src =>
                     src.Company!.Name));
 
         //Candidate
@@ -28,5 +28,4 @@ public class AutoMapperConfigProfile : Profile
                 opt =>
                     opt.MapFrom(src => src.Job!.Title));
     }
-    
 }

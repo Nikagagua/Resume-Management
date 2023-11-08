@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18fd207b-c2f9-418c-877d-e1d631046580" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../backend/Documents/PDF/ae02b151-2653-471d-9a78-0a3582395d42.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/Documents/PDF/b15875d2-ca99-479d-b457-a6f2034d7cb4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/Index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_variable.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.ResumeManagement.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.vs/backend/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.vs/backend/FileContentIndex/355bda82-9409-4027-9d75-3e5d8aa9c929.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.vs/backend/FileContentIndex/3e13957a-2ebe-4a36-981d-98c7dfc0d72d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.vs/backend/FileContentIndex/42f3cb11-9a7e-4755-a839-ae40e5ab708a.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.vs/backend/FileContentIndex/c6c19248-5c11-408c-bb19-d11c5d40f252.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.vs/backend/FileContentIndex/read.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.vs/backend/config/applicationhost.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/Documents/PDF/632425cc-edbe-49a9-a866-be3faf9d5e44.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/Migrations/20230917152039_InitialMigration.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/Migrations/20230917152039_InitialMigration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/Migrations/20230917170151_UpdateEnumToString.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/Migrations/20230917170151_UpdateEnumToString.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/Migrations/ResumeManagementDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/bin/Debug/net7.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/backend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/backend.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/backend.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/backend.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/backend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/Debug/net7.0/backend.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/backend.csproj.EntityFrameworkCore.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/backend.csproj.EntityFrameworkCore.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/backend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/backend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/backend.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.frontend.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.frontend.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.component.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/custom-linear-progress/customlinearprogress.components.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-linear-progress/customlinearprogress.components.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2WGUns3IkJzoyXkXbW35rg3Mbcg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Admin/RiderProjects/ResumeManagement/frontend/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\Admin\\RiderProjects\\ResumeManagement\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\RiderProjects\ResumeManagement\frontend\src" />
+      <recent name="C:\Users\Admin\RiderProjects\ResumeManagement\frontend\src\components" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18fd207b-c2f9-418c-877d-e1d631046580" name="Changes" comment="" />
+      <created>1696358583667</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696358583667</updated>
+      <workItem from="1696358584831" duration="463000" />
+      <workItem from="1696414270467" duration="4354000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

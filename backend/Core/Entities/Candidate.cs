@@ -8,7 +8,7 @@ public class Candidate : BaseEntity
     public string? Phone { get; set; }
     public string? CoverLetter { get; set; }
     public string? ResumeUrl { get; set; }
-    
+
     //Relations with Job
     public long JobId { get; set; }
     public Job? Job { get; set; }

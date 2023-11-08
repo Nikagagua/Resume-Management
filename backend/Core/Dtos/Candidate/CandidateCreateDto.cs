@@ -6,8 +6,9 @@ public class CandidateCreateDto
     public string? LastName { get; set; }
     public string? Email { get; set; }
     public string? Phone { get; set; }
+
     public string? CoverLetter { get; set; }
+
     //Relations with Job
     public long JobId { get; set; }
-
 }

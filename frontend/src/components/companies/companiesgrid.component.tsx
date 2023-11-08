@@ -14,7 +14,6 @@ interface ICompaniesGridProps {
 const CompaniesGrid = ({ data, onDelete, onEdit }: ICompaniesGridProps) => {
     
 const column: GridColDef[] = [
-    { field: "id", headerName:"ID", width:100},
     { field: "name", headerName:"Name", width:200},
     { field: "size", headerName:"Size", width:150},
     { field: "createdAt", headerName:"Creation Time", width:200, 

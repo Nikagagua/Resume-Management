@@ -6,7 +6,7 @@ public class Company : BaseEntity
 {
     public string? Name { get; set; }
     public CompanySize Size { get; set; }
-    
+
     //Relations with Job
     public ICollection<Job>? Jobs { get; set; }
 }

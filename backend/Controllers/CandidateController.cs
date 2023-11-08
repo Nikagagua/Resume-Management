@@ -11,47 +11,39 @@ namespace backend.Controllers;
 [Route("api/[controller]")]
 public class CandidateController : ControllerBase
 {
-    private ResumeManagementDbContext Context { get; }
-    private IMapper Mapper { get; }
-
     public CandidateController(ResumeManagementDbContext context, IMapper mapper)
     {
         Context = context;
         Mapper = mapper;
     }
 
+    private ResumeManagementDbContext Context { get; }
+    private IMapper Mapper { get; }
+
     //Create
     [HttpPost]
     [Route("Create")]
     public async Task<IActionResult> CreateCandidate([FromForm] CandidateCreateDto? dto, IFormFile pdfFile)
     {
-        if (dto == null)
-        {
-            return BadRequest(new { message = "Candidate object is null" });
-        }
+        if (dto == null) return BadRequest(new { message = "Candidate object is null" });
 
         //File validation
         const int fiveMegabyte = 5 * 1024 * 1024;
         const string pdfMimeType = "application/pdf";
 
         if (pdfFile.Length > fiveMegabyte || pdfFile.ContentType != pdfMimeType)
-        {
             return BadRequest("File format or size is not valid!\nOnly PDF files are allowed!");
-        }
 
-        var resumeUrl = Guid.NewGuid().ToString() + ".pdf";
+        var resumeUrl = Guid.NewGuid() + ".pdf";
         var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "Documents", "PDF");
 
-        if (!Directory.Exists(directoryPath))
-        {
-            Directory.CreateDirectory(directoryPath);
-        }
+        if (!Directory.Exists(directoryPath)) Directory.CreateDirectory(directoryPath);
 
         var filePath = Path.Combine(directoryPath, resumeUrl);
 
         while (System.IO.File.Exists(filePath))
         {
-            resumeUrl = Guid.NewGuid().ToString() + ".pdf";
+            resumeUrl = Guid.NewGuid() + ".pdf";
             filePath = Path.Combine(directoryPath, resumeUrl);
         }
 
@@ -83,13 +75,10 @@ public class CandidateController : ControllerBase
     {
         var sourceFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents", "PDF", url);
 
-        if (!System.IO.File.Exists(sourceFilePath))
-        {
-            return NotFound("File not found.");
-        }
+        if (!System.IO.File.Exists(sourceFilePath)) return NotFound("File not found.");
 
         // Generate a unique temporary file name
-        var tempFileName = Guid.NewGuid().ToString() + ".pdf";
+        var tempFileName = Guid.NewGuid() + ".pdf";
         var tempFilePath = Path.Combine(Path.GetTempPath(), tempFileName);
 
         // Copy the source file to the temporary location
@@ -119,10 +108,7 @@ public class CandidateController : ControllerBase
             .Include(candidate => candidate.Job)
             .FirstOrDefaultAsync(q => q.Id == id);
 
-        if (candidate == null)
-        {
-            return NotFound();
-        }
+        if (candidate == null) return NotFound();
 
         var convertedCandidate = Mapper.Map<CandidateGetDto>(candidate);
         return Ok(convertedCandidate);
@@ -133,20 +119,14 @@ public class CandidateController : ControllerBase
     public async Task<IActionResult> EditJob(long id, [FromBody] CandidateCreateDto dto)
     {
         if (id <= 0) throw new ArgumentOutOfRangeException(nameof(id));
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
         Debug.Assert(Context.Candidates != null, "Context.Candidates != null");
         var existingCandidate = await Context.Candidates
             .Include(candidate => candidate.Job)
             .FirstOrDefaultAsync(q => q.Id == id);
 
-        if (existingCandidate == null)
-        {
-            return NotFound();
-        }
+        if (existingCandidate == null) return NotFound();
 
         Mapper.Map(dto, existingCandidate);
         await Context.SaveChangesAsync();
@@ -162,16 +142,10 @@ public class CandidateController : ControllerBase
         try
         {
             var candidate = await Context.Candidates!.FirstOrDefaultAsync(q => q.Id == id);
-            if (candidate == null)
-            {
-                return NotFound();
-            }
+            if (candidate == null) return NotFound();
 
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Documents", "PDF", candidate.ResumeUrl!);
-            if (System.IO.File.Exists(filePath))
-            {
-                System.IO.File.Delete(filePath);
-            }
+            if (System.IO.File.Exists(filePath)) System.IO.File.Delete(filePath);
 
             Context.Candidates!.Remove(candidate);
             await Context.SaveChangesAsync();

@@ -163,10 +163,10 @@ C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\backend.d
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\backend.pdb
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\AutoMapperBuilder.dll
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\Humanizer.dll
-C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\Admin\RiderProjects\ResumeManagement\backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll

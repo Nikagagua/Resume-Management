@@ -16,7 +16,6 @@ interface ICandidatesGridProps {
 const CandidatesGrid = ({ data, onDelete, onEdit }: ICandidatesGridProps) => {
     
 const column: GridColDef[] = [
-    { field: "id", headerName:"ID", width:100},
     { field: "firstName", headerName:"First Name", width:200},
     { field: "lastName", headerName:"Last Name", width:200},
     { field: "email", headerName:"Email", width:200},

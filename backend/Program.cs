@@ -1,6 +1,9 @@
+using System.Globalization;
 using System.Text.Json.Serialization;
+using AutoMapper;
 using backend.Core.AutoMapperConfig;
 using backend.Core.Context;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +15,7 @@ builder.Services.AddDbContext<ResumeManagementDbContext>(options =>
         .UseSqlServer(builder.Configuration.GetConnectionString("ResumeManagement"));
 });
 
-// Automapper Configuration
+// Auto mapper Configuration
 builder.Services.AddAutoMapper(typeof(AutoMapperConfigProfile));
 
 builder.Services
@@ -26,6 +29,17 @@ builder.Services
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.Configure<RequestLocalizationOptions>(
+    options =>
+    {
+        var supportedCultures = new[] { new CultureInfo("en-US") };
+        options.DefaultRequestCulture = new RequestCulture("en-US");
+        options.SupportedCultures = supportedCultures;
+        options.SupportedUICultures = supportedCultures;
+    }
+);
+
 
 var app = builder.Build();
 

@@ -14,7 +14,6 @@ interface IJobsGridProps {
 const JobsGrid = ({ data, onDelete, onEdit }: IJobsGridProps) => {
     
 const columns: GridColDef[] = [
-    { field: "id", headerName:"ID", width:100},
     { field: "title", headerName:"Title", width:300},
     { field: "level", headerName:"Level", width:200},
     { field: "companyName", headerName:"Company Name", width:250},
